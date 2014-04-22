@@ -3,18 +3,44 @@
 <head>
     <title>Homework two</title>
     <meta name="keywords" content="Homework,Professor Jacob"/>
+    <style>
+        h1 {color:blue;font-size:40px;}
+        label {margin-right:400px;}
+        input {margin-right:400px;}
+    </style>
+    <script>
+        var a,b,results;
+        function setValues()
+        {
+            a = Number(document.getElementById("a").value);
+            b = Number(document.getElementById("b").value);
+        }
+        function sum()
+        {
+            setValues();
+            result = a+b;
+            alert("The sum is equal to"+result);
+        }
+    </script>
 </head>
 <body>
     <fieldset>
-        <h1>Name</h1>
+        <h1>Input Information</h1>
         <form>
             <label for="firstname">First Name:</label>
             <input type="text" name="firstname" id="firstname"/><br>
             <label for="middlename">Middle Name:</label>
             <input type="text" name="middlename" id="middlename"/><br>
             <label for="lastname">Last Name:</label>
-            <input type="text" name="lastname" id="lastname"/>
+            <input type="text" name="lastname" id="lastname"/><br>
+            <input type="submit" value="Submit"/>
+            <input type="submit" value="Clear"/>
         </form>
+    </fieldset>
+    <fieldset>
+        <input type="text" id="a" />
+        <input type="text" id="b"/>
+        <input type="button" onclick="sum()" value="sum"/>
     </fieldset>
 </body>
 </html>
